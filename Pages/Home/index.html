@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Pagina Inicial</title>
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
@@ -17,11 +17,11 @@
         </ul><!--Fechamento Lista de itens do menu-->
     </nav><!--Fechamento Menu-->
     <header><!--Abertura Header-->
-        <h1>PROJETOS TREINO</h1>
+        <h1 id="title">PROJETOS TREINO</h1>
     </header><!--Fechamento Header-->
     <main><!--Abertura da main -->
-        <div class="conteiner">
-            <div class="texts">
+        <div class="conteiner"><!--Abertura Conteiner-->
+            <div class="texts"><!--Abertura Texts-->
                 <span>
                     <p>Lorem ipsum dolor sit amet. Et ducimus quod sed culpa atque hic ratione soluta. Ea provident         accusamus qui odio porro et
                     perspiciatis consequatur in quibusdam asperiores! Eum odit aspernatur eos earum omnis ut ipsum blanditiis.</p>
@@ -31,16 +31,18 @@
                     perspiciatis consequatur in quibusdam asperiores! Eum odit aspernatur eos earum omnis ut ipsum blanditiis.</p>
                 </span>
                 <button><a href="">Meu portifólio</a></button>
-            </div>
-            <img src="../../Medias/Selo5.png"/>
-            <img src="../../Medias/Selo2.png" />
-            <img src="../../Medias/Selo4.png" />
-            <div class="avatar"><img src="../../Medias/avatar.webp" alt="avatar-fazendo-hanglouse"></div>
-            <img src="../../Medias/Selo3.png" />
-            <img src="../../Medias/Selo1.png" />
-        </div>
+            </div><!--Fechamento Texts-->
+            <div class="imagens"><!--Abertura Imagens-->
+                <img src="../../Medias/Selo5.png" id="selo1"/>
+                <img src="../../Medias/Selo2.png" id="selo2"/>
+                <img src="../../Medias/Selo4.png" id="selo3"/>
+                <img src="../../Medias/Selo3.png" id="selo4"/>
+                <img src="../../Medias/Selo1.png" id="selo5"/>
+                <img src="../../Medias/avatar.png" alt="avatar-fazendo-hanglouse" id="avatar" onclick="trocar()"/>
+            </div><!--Fechamento Imagens-->
+        </div><!--Abertura Conteiner-->
     </main><!--Fechamento da main -->
-    
 
+    <script src="scripts.js"></script><!--Ligação com js externo-->
 </body>
 </html>

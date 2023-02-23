@@ -1,18 +1,45 @@
+/*IMPORTS*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap');
 
-*{
+
+/*Funções*/
+@mixin seloCirculo(){
+    width: 150px;
+    height: 150px;
+    position: absolute;
+}
+
+@mixin seloQuadrado() {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+@mixin seloResponsivo(){
+    width: 80px;
+    height: 80px;
+    position: absolute;
+}
+
+@mixin seloHover(){
+    transform: scale(1.1);
+    transition: 0.2s
+}
+/*FIM FUNÇÕES*/
+
+*{/*GERAL*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+}/*FIM GERAL*/
 
-body{
+body{/*BODY*/
     background-color: #0A0A0A;
     font-family: 'DM Sans', sans-serif;
-}
+}/*FIM BODY*/
 
-nav{
+nav{/*MENU*/
     
 
     img{
@@ -51,21 +78,22 @@ nav{
     }
 
     
-}
+}/*FIM MENU*/
 
-header{
+header{/*HEADER*/
     h1{
         color: white;
         float: right;
-        padding-top: 20px;
         font-size: 140px;
         font-weight: 700;
         margin-right: 50px;
         font-family: 'Kanit', sans-serif;
+        margin-top: -10px;
+        margin-bottom: -10px;
     }
-}
+}/*FIM HEADER*/
 
-main{
+main{/*MAIN*/
     clear: both;
     .texts{
         display: flex;
@@ -93,4 +121,224 @@ main{
             transition: 0.3s;
         }
     }
+    .imagens{
+        margin-top: 50px;
+        background-image: url(../../Medias/Fundo.png);
+        width: 90%;
+        height: 400px;
+        margin-bottom: 50px;
+        border-top-right-radius: 300px; 
+        border-bottom-right-radius: 300px;  
+        position: absolute;
+        #selo1{
+            @include seloCirculo();
+            rotate: 345deg;
+            float: left;
+            top: -5%;
+            left: 20%;
+        }
+        #selo1:hover, #selo2:hover, #selo3:hover, #selo4:hover, #selo5:hover{
+            @include seloHover();
+        }
+
+        #selo2{
+            @include seloQuadrado();
+            float: left;
+            rotate: 330deg;
+            top: 20%;
+            left: 3%;
+        }
+        #selo3 {
+            @include seloCirculo();
+            float: left;
+            top: 60%;
+            left: 15%;
+            rotate: 20deg;
+        }
+        #selo4 {
+            @include seloQuadrado();
+            float: right;
+            top: 0%;
+            left: 70%;
+            rotate: 20deg;
+        }
+        #selo5 {
+            @include seloQuadrado();
+            float: right;
+            top: 45%;
+            left: 75%;
+            rotate: 345deg;
+        }
+        #avatar{
+            width: 420px;
+            height: 420px;
+            position: absolute;
+            left: 32%;
+            bottom: 0.1%;
+        }
+    }
+}/*FIM MAIN*/
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+    nav{/*Abertura menu*/
+        img{
+            margin-left: 10px;
+            width: 80px;
+            height: 25px;
+        }
+
+        ul{
+            margin-right: 0;
+            padding-top: 10px;
+            li {
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            a{
+                font-size: 8px;
+            }
+            }
+        }/*Fechamento menu*/
+    header{/*Abertura header*/
+        h1{
+            font-size: 29px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }/*Fechamento header*/
+    main{/*Abertura main*/
+        max-width: 100%;
+        .texts{
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span{
+                margin-right: 0;
+                font-size: 12px;
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            button{
+                margin-top: 10px;
+            }
+        }
+        .imagens{
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 0;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: row;
+            height: 250px;
+            #selo1{
+                @include seloResponsivo();
+            }
+            #selo2{
+                @include seloResponsivo();
+            }
+            #selo3 {
+                @include seloResponsivo();
+            }
+            #selo4 {
+                @include seloResponsivo();
+            }
+            #selo5 {
+                @include seloResponsivo();
+            }
+            #avatar{
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }/*Fechamento main*/
+}
+
+/* Dispositivos um pouco maiores(1200px para baixo) */
+@media only screen and (max-width: 1200px ) {
+    nav {/*Abertura menu*/
+            img {
+                margin-left: 10px;
+                width: 150px;
+                height: 47px;
+            }
+    
+            ul {
+                margin-right: 20px;
+                padding-top: 15px;
+    
+                li {
+                    margin-left: 8px;
+                    margin-right: 8px;
+                }
+    
+                a {
+                    font-size: 12px;
+                }
+            }
+        }/*Fechamento menu*/
+    header {/*Abertura header*/
+        h1 {
+            font-size: 60px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+    }/*Fechamento header*/
+    main {/*Abertura main*/
+        max-width: 100%;
+
+        .texts {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span {
+                margin-right: 0;
+                font-size: 12px;
+                width: 90%;
+                margin-bottom: 20px;
+            }
+
+            button {
+                margin-top: 10px;
+            }
+        }
+
+        .imagens {
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 0;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: row;
+            height: 250px;
+
+            #selo1 {
+                @include seloResponsivo();
+            }
+
+            #selo2 {
+                @include seloResponsivo();
+            }
+
+            #selo3 {
+                @include seloResponsivo();
+            }
+
+            #selo4 {
+                @include seloResponsivo();
+            }
+
+            #selo5 {
+                @include seloResponsivo();
+            }
+
+            #avatar {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }/*Fechamento main*/
 }

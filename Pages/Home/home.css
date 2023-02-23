@@ -1,16 +1,19 @@
+@charset "UTF-8";
+/*IMPORTS*/
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap");
-* {
+/*Funções*/
+/*FIM FUNÇÕES*/
+* { /*GERAL*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
+} /*FIM GERAL*/
+body { /*BODY*/
   background-color: #0A0A0A;
   font-family: "DM Sans", sans-serif;
-}
-
+} /*FIM BODY*/
+nav { /*MENU*/ }
 nav img {
   width: 150px;
   height: 47px;
@@ -43,17 +46,21 @@ nav ul a:hover {
   transition: 0.2s;
 }
 
+/*FIM MENU*/
+header { /*HEADER*/ }
 header h1 {
   color: white;
   float: right;
-  padding-top: 20px;
   font-size: 140px;
   font-weight: 700;
   margin-right: 50px;
   font-family: "Kanit", sans-serif;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
-main {
+/*FIM HEADER*/
+main { /*MAIN*/
   clear: both;
 }
 main .texts {
@@ -81,4 +88,242 @@ main .texts button a {
 main .texts button:hover {
   transform: scale(1.15);
   transition: 0.3s;
+}
+main .imagens {
+  margin-top: 50px;
+  background-image: url(../../Medias/Fundo.png);
+  width: 90%;
+  height: 400px;
+  margin-bottom: 50px;
+  border-top-right-radius: 300px;
+  border-bottom-right-radius: 300px;
+  position: absolute;
+}
+main .imagens #selo1 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  rotate: 345deg;
+  float: left;
+  top: -5%;
+  left: 20%;
+}
+main .imagens #selo1:hover, main .imagens #selo2:hover, main .imagens #selo3:hover, main .imagens #selo4:hover, main .imagens #selo5:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+main .imagens #selo2 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  float: left;
+  rotate: 330deg;
+  top: 20%;
+  left: 3%;
+}
+main .imagens #selo3 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  float: left;
+  top: 60%;
+  left: 15%;
+  rotate: 20deg;
+}
+main .imagens #selo4 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  float: right;
+  top: 0%;
+  left: 70%;
+  rotate: 20deg;
+}
+main .imagens #selo5 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  float: right;
+  top: 45%;
+  left: 75%;
+  rotate: 345deg;
+}
+main .imagens #avatar {
+  width: 420px;
+  height: 420px;
+  position: absolute;
+  left: 32%;
+  bottom: 0.1%;
+}
+
+/*FIM MAIN*/
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+  nav { /*Abertura menu*/ }
+  nav img {
+    margin-left: 10px;
+    width: 80px;
+    height: 25px;
+  }
+  nav ul {
+    margin-right: 0;
+    padding-top: 10px;
+  }
+  nav ul li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  nav ul a {
+    font-size: 8px;
+  }
+  /*Fechamento menu*/
+  header { /*Abertura header*/ }
+  header h1 {
+    font-size: 29px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  /*Fechamento header*/
+  main { /*Abertura main*/
+    max-width: 100%;
+  }
+  main .texts {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .texts span {
+    margin-right: 0;
+    font-size: 12px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  main .texts button {
+    margin-top: 10px;
+  }
+  main .imagens {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+  }
+  main .imagens #selo1 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+  main .imagens #selo2 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+  main .imagens #selo3 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+  main .imagens #selo4 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+  main .imagens #selo5 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+  main .imagens #avatar {
+    width: 200px;
+    height: 200px;
+  }
+  /*Fechamento main*/
+}
+/* Dispositivos um pouco maiores(1200px para baixo) */
+@media only screen and (max-width: 1200px) {
+  nav { /*Abertura menu*/ }
+  nav img {
+    margin-left: 10px;
+    width: 150px;
+    height: 47px;
+  }
+  nav ul {
+    margin-right: 20px;
+    padding-top: 15px;
+  }
+  nav ul li {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  nav ul a {
+    font-size: 12px;
+  }
+  /*Fechamento menu*/
+  header { /*Abertura header*/ }
+  header h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  /*Fechamento header*/
+  main { /*Abertura main*/
+    max-width: 100%;
+  }
+  main .texts {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .texts span {
+    margin-right: 0;
+    font-size: 12px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  main .texts button {
+    margin-top: 10px;
+  }
+  main .imagens {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+  }
+  main .imagens #selo1 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+  main .imagens #selo2 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+  main .imagens #selo3 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+  main .imagens #selo4 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+  main .imagens #selo5 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+  main .imagens #avatar {
+    width: 200px;
+    height: 200px;
+  }
+  /*Fechamento main*/
 }/*# sourceMappingURL=home.css.map */
