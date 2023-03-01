@@ -12,6 +12,20 @@
     opacity: 0.25;
 }
 
+@mixin CarrocelEscondidoMobile{
+    img {
+            width: 100px;
+            height: 125px;
+            background-color: white;
+        }
+    
+        p {
+            font-size: 12px
+        }
+    
+        opacity: 0.25;
+}
+
 //GELRAL
 *{
     margin: 0;
@@ -59,7 +73,6 @@ nav{
 }
 
 //Header
-
 header{
     background-image: url("../../Medias/TheLastOfUs/capa.png");
     background-repeat: no-repeat;
@@ -72,14 +85,13 @@ header{
 }
 
 //Conteudo
-
 main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    
+    //CONTEINER
     .conteiner{
         padding-top: 7%;
         width: 85%;
@@ -90,6 +102,8 @@ main{
         background-image: linear-gradient(30deg, #0B0C1E,#1D2739);
         margin-top: -5%;
         z-index: 1;
+
+        //LISTA DE ICONES
         .icones{
             display: flex;
             flex-direction: row;
@@ -97,9 +111,9 @@ main{
             margin-top: 7%;
             margin-bottom: 5%;
             .icone{
-                margin-left: 80px;
+                margin-left: 2%;
                 img{
-                    width: 150px;
+                    width: 60%;
                 }
                 p{
                     font-size: 20px;
@@ -135,6 +149,7 @@ main{
 
     }
 
+    //GAMES DISPONIVEIS
     .games{
         margin-top: 0%;
         padding-top: 3%;
@@ -178,6 +193,7 @@ main{
 
     }
     
+    //CARROSSEL DE IMAGENS
     .carrosselImg{
         display: flex;
         flex-direction: row;
@@ -224,6 +240,7 @@ main{
 }
 }
 
+//FOOTER
 footer{
     height: 35px;
     display: flex;
@@ -240,4 +257,19 @@ footer{
         margin-left: 20px;
     }
 
+}
+
+
+
+/* Smartphones */
+@media only screen and (max-width: 600px) {
+    .conteiner{
+        p{
+            font-size: 14px;
+        }
+    }
+
+    .carrosselImg{
+        transform: scale(0.6);  
+    }
 }

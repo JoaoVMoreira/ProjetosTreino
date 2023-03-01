@@ -77,10 +77,10 @@ main .conteiner .icones {
   margin-bottom: 5%;
 }
 main .conteiner .icones .icone {
-  margin-left: 80px;
+  margin-left: 2%;
 }
 main .conteiner .icones .icone img {
-  width: 150px;
+  width: 60%;
 }
 main .conteiner .icones .icone p {
   font-size: 20px;
@@ -221,4 +221,14 @@ footer p {
 footer i {
   color: #d94132;
   margin-left: 20px;
+}
+
+/* Smartphones */
+@media only screen and (max-width: 600px) {
+  .conteiner p {
+    font-size: 14px;
+  }
+  .carrosselImg {
+    transform: scale(0.6);
+  }
 }/*# sourceMappingURL=theLasOfUs.css.map */
