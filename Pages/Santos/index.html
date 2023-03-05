@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santos Futebol Clube - O Maior Brasileiro Do Mundo</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/12b2f251a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--Abertura Menu-->
     <nav>
-        <img>
-        <img>
-        <img>
-        <img>
+        <img src="../../Medias/Santos/escudo.png" alt="Santos futebol clube" id="Escudo">
+        <div class="linguagens">
+            <img src="../../Medias/Santos/ingles.svg" alt="Reino Unido">
+            <img src="../../Medias/Santos/brasil.svg" alt="Brasil">
+            <img src="../../Medias/Santos/espanha.svg" alt="Espanha">
+        </div>
+        <button id="btnMobile"><i class="fa-solid fa-bars"></i></button>
         <div class="menuItens">
             <ul>
                 <li><a href="">CLUBE</a></li>
@@ -24,9 +28,125 @@
                 <li><a href="">CONTATO</a></li>
             </ul>
         </div>
-        <img>
+        <img src="../../Medias//Santos/santos-do-mundo-dourado.png" id="santosDoMundo">
     </nav>
     <!--Fechamento Menu-->
+
+    <!--Abertura header-->
+    <header>
+        <!--Abertura lateral header-->
+        <aside>
+            <a href="https://www.youtube.com/c/santosfc"><img src="../../Medias/Santos/icone2.png" alt="Santos TV" width="50px"></a>
+            <a href="https://sociorei.com/"><img src="../../Medias/Santos/icone1.png" alt="Socio rei Santos" width="55px"></a>
+            <a href="https://www.santosfc.com.br/memorial-das-conquistas/"><img src="../../Medias/Santos/icone3.png" alt="Memorial das conquistas" width="50px"></a>
+            <a href="https://www.santosfc.com.br/escola-de-futebol-meninos-da-vila/"><img src="../../Medias/Santos/icone4.png" alt="Meninos da vila" width="30px"></a>
+            <a href="https://www.santosstore.com.br/"><img src="../../Medias/Santos/icone5.png" alt="Santos Store" width="73px"></a>
+            <a href="https://www.santosfc.com.br/santos-fan-token/"><img src="../../Medias/Santos/icone6.png" alt="Santos Token" width="36px"></a>
+        </aside>
+        <!--Fechamento lateral header-->
+    </header>
+    <!--Fechamento header-->
+
+    <!--Abertura carrossel de noticias-->
+    <div id="news">
+        <div id="carrossel-noticias">
+            <a href="" class="noticia">
+                <img src="../../Medias/Santos/noticia1.jpg" alt=""  >
+                <h3>SEREIAS DA VILA ACERTAM MAIS UM REFORÇO INTERNACIONAL PARA A TEMPORADA 2023</h3>
+            </a>
+            <a href="" class="noticia">
+                <img src="../../Medias/Santos/noticia2.jpg" alt="">
+                <h3>EQUIPE SUB-20 VENCE AMISTOSO PREPARATÓRIO PARA O CAMPEONATO BRASILEIRO</h3>
+            </a>
+            <a href="" class="noticia">
+                <img src="../../Medias/Santos/noticia3.jpg" alt="">
+                <h3>‘ILUMINADO’, LUCAS BARBOSA COMEMORA GOLS DECISIVOS E ACREDITA EM CLASSIFICAÇÃO DO SANTOS FC: “VAMOS LUTAR PARA FAZERNOSSA PARTE”</h3>
+            </a>
+            <a href="" class="noticia">
+                <img src="../../Medias/Santos/noticia4.jpg" alt="">
+                <h3>MANÉ MARIA, ETERNO ÍDOLO SANTISTA</h3>
+            </a>
+            <a href="" class="noticia">
+                <img src="../../Medias/Santos/noticia5.png" alt="">
+                <h3>ENTRADA GRATUITA PARA SANTOS FC X SÃO PAULO, PELO BRASILEIRO SUB-20</h3>
+            </a>
+        </div>
+        <a href=""><button>MAIS NOTÍCIAS</button></a>
+    </div>
+    <!--Fechamento carrossel de noticias-->
+
+    <!--Abertura Proximos Jogos-->
+    <div id="next-games">
+        <div class="sessao1">
+            <h2>JOGOS E INGRESSOS</h2>
+            <div class="jogo" style="background-image: url('../../Medias/Santos/fundo-jogo1.png');">
+                <div id="paulistao">
+                    <img src="../../Medias/Santos/logo-paulistao.png" alt="">
+                    <p>Em casa</p>
+                </div>
+            
+                <span>
+                    <img src="../../Medias/Santos/escudo-jogos.png" alt="">
+                    <p>-</p>
+                    <img src="../../Medias/Santos/cortinas.png" alt="" class="rival">
+                </span>
+            
+                <h3>SANTOS CORINTHIANS</h3>
+            
+                <a href=""><button>SEJA SÓCIO REI</button></a>
+            </div>
+            
+            <div class="jogo" style="background-image: url('../../Medias/Santos/fundo-jogo2.png');">
+                <div id="paulistao">
+                    <img src="../../Medias/Santos/logo-paulistao.png" alt="">
+                    <p>Fora de casa</p>
+                </div>
+            
+                <span>
+                    <img src="../../Medias/Santos/escudo-jogos.png" alt="">
+                    <p>-</p>
+                    <img src="../../Medias/Santos/ituano.png" alt="" class="rival">
+                </span>
+            
+                <h3>ITUANO SANTOS</h3>
+            
+                <a href=""><button>SEJA SÓCIO REI</button></a>
+            </div>
+        </div>
+        
+        <div class="resultados">
+            <div id="last-game">
+                <h2>RESULTADO DO JOGO</h2>
+                <section>
+                    <div class="data"><span>26</span>FEV</div>
+                    <div class="content">
+                        <p id="competicao">CAMPEONATO PAULISTA</p>
+                        <p>SANTOS <span>2</span></p>
+                        <p>CORINTHIANS <span>2</span></p>
+                    </div>
+                    
+                    <div class="data"><span>23</span>FEV</div>
+                    <div class="content">
+                        <p id="competicao">COPA DO BRASIL</p>
+                        <p>CEILÂNDIA <span>0</span></p>
+                        <p>SANTOS <span>1</span></p>
+                    </div>
+                </section>
+            </div>
+            <div id="next-game">
+                <h2>PROXIMO JOGO</h2>
+                <section>
+                    <div class="data"><span>26</span>FEV</div>
+                    <div class="content" >
+                        <p id="competicao" style="color: black; font-weight: 900;">CAMPEONATO PAULISTA</p>
+                        <p style="color: black;">ITUANO</p>
+                        <p style="color: black;">SANTOS</p>
+                    </div>
+                </section>
+                </div>
+        </div>
+    </div>
+    <!--Fechamento Proximos Jogos-->
 
 
 
