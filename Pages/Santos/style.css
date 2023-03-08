@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 body {
@@ -33,6 +34,8 @@ nav #Escudo {
 nav .linguagens {
   margin-bottom: 10px;
   margin-right: 70px;
+  display: flex;
+  flex-direction: row;
 }
 nav .linguagens img {
   width: 20px;
@@ -43,22 +46,26 @@ nav .linguagens img:first-child {
   margin-left: 0;
 }
 nav .menuItens {
+  display: flex;
+  flex-direction: row;
   background-image: url("../../Medias/Santos/fundo-menu.png");
   background-size: cover;
   height: 90px;
+  width: 80%;
 }
 nav .menuItens ul {
   display: flex;
   flex-direction: row;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 nav .menuItens ul li {
+  display: flex;
   list-style: none;
   padding: 34px 0px;
-  font-size: 14px;
+  font-size: 90%;
   font-weight: 900;
-  margin-left: 75px;
+  margin-left: 5vw;
 }
 nav .menuItens ul li a {
   color: black;
@@ -68,8 +75,9 @@ nav .menuItens ul li:first-child {
   margin-left: 0;
 }
 nav #santosDoMundo {
-  width: 68px;
+  width: 4%;
   margin-left: 3%;
+  margin-right: 3%;
 }
 nav #btnMobile {
   display: none;
@@ -125,14 +133,32 @@ header aside a:hover {
 #carrossel-noticias {
   display: flex;
   flex-direction: row;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+#carrossel-noticias button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 3%;
+  bottom: -35%;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background-color: #dda84c;
+}
+#carrossel-noticias button:last-child {
+  left: 95%;
 }
 #carrossel-noticias .noticia {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   max-width: 295px;
   padding-top: 10px;
   padding-bottom: 50px;
   margin-left: 35px;
+  transition: 0.6s;
 }
 #carrossel-noticias .noticia img {
   width: 293px;
@@ -302,8 +328,273 @@ header aside a:hover {
   padding-bottom: 10%;
 }
 
+#santos-tv {
+  background-image: url("../../Medias/Santos/fundo2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#santos-tv .title {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#santos-tv .title h2 {
+  font-size: 54px;
+  font-weight: 900;
+  width: 150px;
+  text-align: center;
+  line-height: 45px;
+  margin-right: 5%;
+}
+#santos-tv .title hr {
+  color: #101010;
+  width: 60%;
+  height: 5px;
+  background-color: #101010;
+}
+#santos-tv .carrossel-videos {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: hidden;
+  margin-bottom: 20px;
+}
+#santos-tv .carrossel-videos button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: 96%;
+}
+#santos-tv .carrossel-videos button:last-child {
+  right: 1%;
+}
+#santos-tv .carrossel-videos iframe {
+  border: 1px solid #c49544;
+  border-radius: 10px;
+}
+#santos-tv button {
+  background-color: #DDA74C;
+  border: none;
+  height: 40px;
+  width: 150px;
+  color: white;
+  font-weight: 900;
+  margin-left: 45%;
+  margin-bottom: 50px;
+}
+
+#lista-de-icones {
+  background-image: url("../../Medias/Santos/fundo3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  overflow-x: hidden;
+}
+#lista-de-icones .icone {
+  flex-shrink: 0;
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px;
+  border-radius: 40px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+#lista-de-icones .icone img {
+  width: 160px;
+  height: 141px;
+}
+#lista-de-icones button {
+  height: 40px;
+  width: 40px;
+  background-color: #DDA74C;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 95%;
+}
+#lista-de-icones button:first-child {
+  left: 3%;
+}
+
+#area-socio-rei {
+  background-image: url("../../Medias/Santos/fundo4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 560px;
+}
+#area-socio-rei a {
+  font-size: 25px;
+  color: white;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+
+#nosso-time {
+  background-image: url("../../Medias/Santos/fundo5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+#nosso-time .titulo {
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#nosso-time .titulo h2 {
+  font-size: 54px;
+  color: #DDA74C;
+  font-weight: 900;
+  padding-right: 10%;
+}
+#nosso-time .titulo hr {
+  width: 360px;
+  height: 3px;
+  margin-right: 10%;
+  color: #DDA74C;
+  background-color: #DDA74C;
+  border: #DDA74C;
+}
+#nosso-time .titulo button {
+  background-color: #DDA74C;
+  border: none;
+  color: white;
+  width: 250px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 14px;
+}
+#nosso-time .jogador {
+  display: flex;
+  flex-direction: row;
+  padding-right: 8%;
+  flex-shrink: 0;
+}
+#nosso-time .jogador img {
+  width: 467px;
+  height: 700px;
+}
+#nosso-time .jogador .dados-jogador span {
+  font-size: 129px;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+#nosso-time .jogador .dados-jogador .nome {
+  margin-top: -20px;
+  letter-spacing: 0;
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+}
+#nosso-time .jogador .dados-jogador .posicao {
+  font-weight: 600;
+  font-size: 30px;
+  color: white;
+}
+#nosso-time .jogador .dados-jogador a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #dda84c;
+}
+#nosso-time #carrossel-jogadores {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  align-items: center;
+}
+#nosso-time #carrossel-jogadores button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #DDA74C;
+  color: white;
+  position: absolute;
+  left: 2%;
+}
+#nosso-time #carrossel-jogadores button:last-child {
+  left: 95%;
+}
+
+#santos-store {
+  background-image: url("../../Medias/Santos/download.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  padding-top: 8%;
+  padding-bottom: 4%;
+  justify-content: center;
+  align-items: center;
+}
+#santos-store .esquerda {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10%;
+}
+#santos-store .esquerda button {
+  background-color: #dda84c;
+  border: none;
+  width: 150px;
+  height: 40px;
+  color: white;
+  font-weight: 900;
+}
+#santos-store .esquerda img {
+  width: 410px;
+  height: 112px;
+  padding-bottom: 5%;
+}
+#santos-store .direita img {
+  width: 570px;
+  height: 399px;
+}
+
+footer {
+  background-color: #101010;
+  width: 100%;
+  height: 40px;
+}
+
 /*Dispostivos Médios (Tablets deitados, 768px para cima) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1028px) {
+  body {
+    overflow-x: hidden;
+  }
+  #santos-store {
+    display: flex;
+    flex-direction: column;
+  }
+  #santos-store .esquerda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #area-socio-rei img {
+    width: 320px;
+    height: 120px;
+  }
   nav {
     max-width: 100%;
     background-color: black;
@@ -354,15 +645,84 @@ header aside a:hover {
     display: block;
     font-size: 20px;
     transition: 0.6s;
+    position: absolute;
+    left: 95%;
   }
   nav .linguagens {
-    margin-left: 15%;
-    padding-right: 12%;
+    position: absolute;
+    left: 45%;
   }
   header {
     display: none;
   }
   #news {
     padding-top: 90px;
+  }
+  #news #carrossel-noticias button {
+    top: 45%;
+  }
+  #news #carrossel-noticias button:last-child {
+    left: 90%;
+  }
+  #next-games .sessao1 {
+    display: flex;
+    flex-direction: column;
+  }
+  #next-games .sessao1 h2 {
+    margin-bottom: 10%;
+  }
+  #next-games .jogo {
+    width: 100%;
+    margin-left: 0;
+  }
+  #next-games .resultados {
+    display: flex;
+    flex-direction: column;
+  }
+  #next-games .resultados #last-game {
+    width: 100%;
+  }
+  #next-games .resultados #next-game {
+    width: 100%;
+  }
+  #santos-tv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #santos-tv hr {
+    display: none;
+  }
+  #santos-tv .carrossel-videos button {
+    right: 90%;
+  }
+  #lista-de-icones button:last-child {
+    left: 90%;
+  }
+  #nosso-time .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #nosso-time .titulo h2 {
+    padding-right: 0;
+  }
+  #nosso-time .titulo hr {
+    display: none;
+  }
+  #nosso-time #carrossel-jogadores .jogador {
+    margin-left: 12%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  #santosDoMundo {
+    display: none;
+  }
+  .menuItens {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */
