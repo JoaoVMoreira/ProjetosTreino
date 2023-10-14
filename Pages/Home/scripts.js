@@ -54,9 +54,9 @@ selo5.addEventListener("mouseout", function () {
 
 let imgIndex = 0;
 const imgArray = [
-    "../../Medias/avatar.png",
-    "../../Medias/avatar2.png",
-    "../../Medias/avatar3.png"
+    "./Medias/avatar.png",
+    "./Medias/avatar2.png",
+    "./Medias/avatar3.png"
 ]
 
 avatar.addEventListener("click", function(){
